@@ -471,11 +471,12 @@ class ReactiveMap extends Component {
 		return null;
 	};
 
+
 	parseLocation(location) {
 		if (Array.isArray(location)) {
 			return {
-				lat: Number(location[0]),
-				lng: Number(location[1]),
+				lat: Number(location[0][0]),
+				lng: Number(location[0][1]),
 			};
 		}
 		return {
